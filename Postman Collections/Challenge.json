@@ -4,5 +4,19 @@
     "name": "Challenge",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
-  "item": []
+  "item": [
+    {
+      "name": "Criar Empregado",
+      "_postman_id": "de10f9bb-bafb-4c92-94e3-9503ddc0c008",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": ""
+      },
+      "response": []
+    }
+  ]
 }
