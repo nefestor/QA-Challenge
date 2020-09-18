@@ -114,6 +114,53 @@
         "url": "{{url}}/employee/{{emp_id}}"
       },
       "response": []
+    },
+    {
+      "name": "Busca Empregado pelo ID Copy",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "d4e0bf38-fa66-42a4-8dec-a5055d288959",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "aac58125-b9cf-40ca-a4c3-15224c0c59df",
+            "exec": [
+              "pm.test(\"Codigo do status \u00e9 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Mensagem retornada \u00e9 de sucesso\", function () {\r",
+              "    pm.response.message = \"Successfully! Record has been fetched.\";\r",
+              "});\r",
+              "\r",
+              "/*pm.test(\"Armazena message na variavel mensagem\", function () {\r",
+              "    let jsonResponse = pm.response.json();\r",
+              "    pm.environment.set(\"mensagem\", jsonResponse.message)\r",
+              "});*/\r",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "_postman_id": "a5ef7695-aa79-448f-af25-0c356ba9387f",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{url}}/employee/{{emp_id}}"
+      },
+      "response": []
     }
   ],
   "event": [
@@ -140,13 +187,13 @@
   ],
   "variable": [
     {
-      "id": "129fa30e-3752-4d2a-b2fa-5fc2fec06ead",
+      "id": "50f26302-43e7-4d6c-ab86-38dde239aae8",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
     },
     {
-      "id": "1904b1e1-4a78-4bb4-b2d8-87cc92386c40",
+      "id": "f55ab00a-1faa-45fc-a08b-2c4e01ab5c53",
       "key": "employee_id",
       "value": "0",
       "type": "string"
