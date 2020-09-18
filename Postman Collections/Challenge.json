@@ -91,14 +91,19 @@
           "script": {
             "id": "466d49b1-dfa1-4845-a821-0237f970d6fe",
             "exec": [
-              "pm.test(\"Status code is 200\", function () {\r",
+              "pm.test(\"Codigo do status \u00e9 200\", function () {\r",
               "    pm.response.to.have.status(200);\r",
               "});\r",
               "\r",
+              "pm.test(\"Mensagem retornada \u00e9 de sucesso\", function () {\r",
+              "    pm.response.message = \"Successfully! Record has been fetched.\";\r",
+              "});\r",
               "\r",
-              "let jsonResponse = pm.response.json();\r",
-              "pm.environment.set(\"mensagem\", jsonResponse.message);\r",
-              "console.info(mensagem);"
+              "/*pm.test(\"Armazena message na variavel mensagem\", function () {\r",
+              "    let jsonResponse = pm.response.json();\r",
+              "    pm.environment.set(\"mensagem\", jsonResponse.message)\r",
+              "});*/\r",
+              ""
             ],
             "type": "text/javascript"
           }
@@ -140,13 +145,13 @@
   ],
   "variable": [
     {
-      "id": "3e688604-685f-4586-bece-034a04105848",
+      "id": "0cd79c0f-c714-41a6-94a2-ee7fdac13427",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
     },
     {
-      "id": "c4435cc6-9184-4078-97d5-3975f63f8ba6",
+      "id": "f0fa4345-829e-4506-b526-242bdd44e30a",
       "key": "employee_id",
       "value": "0",
       "type": "string"
