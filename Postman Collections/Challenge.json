@@ -187,15 +187,9 @@
   ],
   "variable": [
     {
-      "id": "d6c4ce66-77b8-4048-9413-303e42d3f79f",
+      "id": "47e0a456-72a5-45c8-9e45-0af02e037dc2",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
-      "type": "string"
-    },
-    {
-      "id": "e6a9410b-cb4b-4c23-9c7d-1acebc636b69",
-      "key": "employee_id",
-      "value": "0",
       "type": "string"
     }
   ]
