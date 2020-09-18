@@ -23,13 +23,18 @@
           "script": {
             "id": "24bad26c-8edb-41f3-bbb5-2b0ac48fee74",
             "exec": [
-              "pm.test(\"Status code is 201\", function () {\r",
-              "    pm.response.to.have.status(201);\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
               "});\r",
               "\r",
               "// salva o id do empregado na vari\u00e1vel de ambiente emp_id\r",
               "let jsonResponse = pm.response.json();\r",
-              "pm.environment.set(\"emp_id\", jsonResponse.data.id);"
+              "pm.environment.set(\"emp_id\", jsonResponse.data.id);\r",
+              "\r",
+              "\r",
+              "pm.test(\"Body is correct\", function () {\r",
+              "    pm.response.to.have.body.message(\"Successfully! Record has been added.\");\r",
+              "});"
             ],
             "type": "text/javascript"
           }
@@ -70,6 +75,34 @@
     },
     {
       "name": "Busca Empregado pelo ID",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "3914c363-62a6-435a-8371-b1a861d94b2d",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "466d49b1-dfa1-4845-a821-0237f970d6fe",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "\r",
+              "let jsonResponse = pm.response.json();\r",
+              "pm.environment.set(\"mensagem\", jsonResponse.message);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "_postman_id": "59b93476-f1ce-4fb2-9b7e-152eff9349fc",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -77,7 +110,7 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": "http://dummy.restapiexample.com/api/v1/employee/1"
+        "url": "{{url}}/employee/{{emp_id}}"
       },
       "response": []
     }
@@ -106,13 +139,13 @@
   ],
   "variable": [
     {
-      "id": "13df9860-227f-436a-bfca-b1e783b6bae6",
+      "id": "bc0981e1-b24e-450c-8089-9e79bf5aa0d8",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
     },
     {
-      "id": "52beba89-56b6-40d3-b4ca-ad9d28101ff5",
+      "id": "0bb28f19-bba6-4842-a31f-931ea581a12e",
       "key": "employee_id",
       "value": "0",
       "type": "string"
