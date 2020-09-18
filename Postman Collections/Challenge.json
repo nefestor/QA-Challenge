@@ -137,15 +137,9 @@
               "    pm.response.to.have.status(200);\r",
               "});\r",
               "\r",
-              "pm.test(\"Mensagem retornada \u00e9 de sucesso\", function () {\r",
-              "    pm.response.message = \"Successfully! Record has been fetched.\";\r",
-              "});\r",
-              "\r",
-              "/*pm.test(\"Armazena message na variavel mensagem\", function () {\r",
-              "    let jsonResponse = pm.response.json();\r",
-              "    pm.environment.set(\"mensagem\", jsonResponse.message)\r",
-              "});*/\r",
-              ""
+              "pm.test(\"Mensagem delete retornada\", function () {\r",
+              "    pm.response.message = \"Successfully! Record has been deleted\";\r",
+              "});"
             ],
             "type": "text/javascript"
           }
@@ -158,7 +152,23 @@
       "request": {
         "method": "DELETE",
         "header": [],
-        "url": "{{url}}/delete/{{emp_id}}"
+        "url": {
+          "raw": "{{url}}/delete/{{emp_id}}?id={{emp_id}}",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "delete",
+            "{{emp_id}}"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "{{emp_id}}",
+              "type": "text"
+            }
+          ]
+        }
       },
       "response": []
     }
@@ -187,7 +197,7 @@
   ],
   "variable": [
     {
-      "id": "47e0a456-72a5-45c8-9e45-0af02e037dc2",
+      "id": "2c8de6ad-d143-4885-b22f-d26bf6cb8ccc",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
