@@ -29,12 +29,7 @@
               "\r",
               "// salva o id do empregado na vari\u00e1vel de ambiente emp_id\r",
               "let jsonResponse = pm.response.json();\r",
-              "pm.environment.set(\"emp_id\", jsonResponse.data.id);\r",
-              "\r",
-              "\r",
-              "pm.test(\"Body is correct\", function () {\r",
-              "    pm.response.to.have.body.message(\"Successfully! Record has been added.\");\r",
-              "});"
+              "pm.environment.set(\"emp_id\", jsonResponse.data.id);"
             ],
             "type": "text/javascript"
           }
@@ -145,13 +140,13 @@
   ],
   "variable": [
     {
-      "id": "0cd79c0f-c714-41a6-94a2-ee7fdac13427",
+      "id": "d0be7432-b17e-45cd-a86a-53ecf7df1979",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
     },
     {
-      "id": "f0fa4345-829e-4506-b526-242bdd44e30a",
+      "id": "e8dc2b53-c5ae-4956-992e-8d20e55fa178",
       "key": "employee_id",
       "value": "0",
       "type": "string"
