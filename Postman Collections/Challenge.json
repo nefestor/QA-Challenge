@@ -23,15 +23,14 @@
           "script": {
             "id": "24bad26c-8edb-41f3-bbb5-2b0ac48fee74",
             "exec": [
-              "const responseJson = pm.response.json();\r",
-              "\r",
-              "pm.test(\"Person is Tiago\", () => {\r",
-              "    const responseJson = pm.response.json();\r",
-              "  pm.expect(responseJson.name).to.eql(\"Tiago\");\r",
-              "  pm.expect(responseJson.age).to.eql(24);\r",
+              "pm.test(\"Status code is 201\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
               "});\r",
               "\r",
-              "pm.environment.set(\"emp_id\", responseJson.id);"
+              "// save the `item_id` returned in the response as an environment variable\r",
+              "let jsonResponse = pm.response.json();\r",
+              "pm.environment.set(\"emp_id\", jsonResponse.name);\r",
+              ""
             ],
             "type": "text/javascript"
           }
@@ -108,13 +107,13 @@
   ],
   "variable": [
     {
-      "id": "edaa069e-ccaf-40a1-a9f2-f541c18610fb",
+      "id": "607243d5-737e-4d03-9c8e-17c9e16187cb",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
     },
     {
-      "id": "abc4a4e9-a4ee-4e6e-b898-09b85fae124b",
+      "id": "ee2568cd-39dd-451d-bf63-cd3836750934",
       "key": "employee_id",
       "value": "0",
       "type": "string"
