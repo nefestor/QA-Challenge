@@ -54,9 +54,45 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": ""
+        "url": "http://dummy.restapiexample.com/api/v1/employee/1"
       },
       "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "fcf39779-5291-40e1-923f-bf2b5890e299",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "bbb0f636-d8e8-4797-8d77-ec15401f980b",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "1799d16a-0b1b-45a0-a748-6a21297e471c",
+      "key": "id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "id": "45cbf864-dec6-4eee-8481-ce66e0acc29b",
+      "key": "url",
+      "value": "http://dummy.restapiexample.com/api/v1",
+      "type": "string"
     }
   ]
 }
