@@ -46,7 +46,7 @@
       "response": []
     },
     {
-      "name": "Busca Empregado",
+      "name": "Busca Empregado pelo ID",
       "_postman_id": "59b93476-f1ce-4fb2-9b7e-152eff9349fc",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
