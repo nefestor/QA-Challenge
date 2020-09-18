@@ -156,9 +156,9 @@
         "disableBodyPruning": true
       },
       "request": {
-        "method": "GET",
+        "method": "DELETE",
         "header": [],
-        "url": "{{url}}/employee/{{emp_id}}"
+        "url": "{{url}}/delete/{{emp_id}}"
       },
       "response": []
     }
@@ -187,13 +187,13 @@
   ],
   "variable": [
     {
-      "id": "50f26302-43e7-4d6c-ab86-38dde239aae8",
+      "id": "d6c4ce66-77b8-4048-9413-303e42d3f79f",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
     },
     {
-      "id": "f55ab00a-1faa-45fc-a08b-2c4e01ab5c53",
+      "id": "e6a9410b-cb4b-4c23-9c7d-1acebc636b69",
       "key": "employee_id",
       "value": "0",
       "type": "string"
