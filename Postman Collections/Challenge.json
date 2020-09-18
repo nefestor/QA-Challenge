@@ -7,6 +7,31 @@
   "item": [
     {
       "name": "Criar Empregado",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "ff859b37-81e6-42f8-9f7e-166644355565",
+            "exec": [
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "24bad26c-8edb-41f3-bbb5-2b0ac48fee74",
+            "exec": [
+              "\r",
+              "var jsonData = pm.response.json();\r",
+              "pm.collectionVariables.set(\"id\", jsonData.id);\r",
+              "console.log(id);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
       "_postman_id": "de10f9bb-bafb-4c92-94e3-9503ddc0c008",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
@@ -15,16 +40,11 @@
         "method": "POST",
         "header": [],
         "url": {
-          "raw": "http://dummy.restapiexample.com/api/v1/create?name=Tiago&salary=1000000&age=24",
-          "protocol": "http",
+          "raw": "{{url}}/create?name=Tiago&salary=1000000&age=24",
           "host": [
-            "dummy",
-            "restapiexample",
-            "com"
+            "{{url}}"
           ],
           "path": [
-            "api",
-            "v1",
             "create"
           ],
           "query": [
@@ -83,13 +103,13 @@
   ],
   "variable": [
     {
-      "id": "1799d16a-0b1b-45a0-a748-6a21297e471c",
+      "id": "a4702d84-9451-4260-890a-5a71598bca98",
       "key": "id",
       "value": "",
       "type": "string"
     },
     {
-      "id": "45cbf864-dec6-4eee-8481-ce66e0acc29b",
+      "id": "e6c8df91-3ce3-43ee-9a24-2deeeff73424",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
