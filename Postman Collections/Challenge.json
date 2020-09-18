@@ -27,12 +27,9 @@
               "    pm.response.to.have.status(201);\r",
               "});\r",
               "\r",
-              "// save the `item_id` returned in the response as an environment variable\r",
+              "// salva o id do empregado na vari\u00e1vel de ambiente emp_id\r",
               "let jsonResponse = pm.response.json();\r",
-              "pm.environment.set(\"emp_id\", jsonResponse.data.id);\r",
-              "\r",
-              "\r",
-              ""
+              "pm.environment.set(\"emp_id\", jsonResponse.data.id);"
             ],
             "type": "text/javascript"
           }
@@ -109,13 +106,13 @@
   ],
   "variable": [
     {
-      "id": "e50adb74-7224-4646-8aba-36ca20435bfe",
+      "id": "13df9860-227f-436a-bfca-b1e783b6bae6",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
     },
     {
-      "id": "126cc91a-8050-4589-97f6-d6d5d5272f80",
+      "id": "52beba89-56b6-40d3-b4ca-ad9d28101ff5",
       "key": "employee_id",
       "value": "0",
       "type": "string"
