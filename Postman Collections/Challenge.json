@@ -150,7 +150,7 @@
       "response": []
     },
     {
-      "name": "Busca Empregado pelo ID Copy",
+      "name": "Deleta Empregado pelo ID",
       "event": [
         {
           "listen": "test",
@@ -218,7 +218,7 @@
   ],
   "variable": [
     {
-      "id": "c15c77ee-6ed7-4b9f-bf2e-ed651e43080d",
+      "id": "50fe4f24-ae52-4ce9-b542-b01b54d7b71c",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
