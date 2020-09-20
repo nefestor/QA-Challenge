@@ -157,18 +157,16 @@
           "script": {
             "id": "2f1a2376-6279-473b-81b1-57928d185758",
             "exec": [
-              "// This checks the status code number\r",
               "pm.test(\"Test 1: 200 Status Code\", () => pm.response.to.have.status(200))\r",
               "\r",
-              "// This checks the status text string\r",
               "pm.test('Test 2: 200 Status Code', () => pm.response.to.have.status('OK'))\r",
               "\r",
-              "// This is using a pre-defined rule offered by Postman\r",
               "pm.test('Test 3: 200 Status Code', () => pm.response.to.be.ok)\r",
               "\r",
-              "\r",
-              "// This checks the message returned\r",
-              "pm.test(\"Mensagem retornada \u00e9 de sucesso\", () => pm.expectpm.response.json().message.to.eql(pm.environment.get(\"mensagemDel\")))"
+              "pm.test(\"Test 4: Mensagem retornada \u00e9 de sucesso\", function () {\r",
+              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemDel\"));\r",
+              "});\r",
+              ""
             ],
             "type": "text/javascript"
           }
@@ -220,7 +218,7 @@
   ],
   "variable": [
     {
-      "id": "10d56a0d-3d18-4f82-a8c0-d6d3bbadcca7",
+      "id": "c15c77ee-6ed7-4b9f-bf2e-ed651e43080d",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
