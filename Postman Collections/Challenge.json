@@ -36,7 +36,7 @@
               "pm.test('Test 4: 200 Status Code', () => pm.expect(pm.response.code).to.equal(200));\r",
               "\r",
               "pm.test(\"Test 5: Mensagem retornada \u00e9 de sucesso\", function () {\r",
-              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"Successfully! Record has been added.\"));\r",
+              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemPost\"));\r",
               "});\r",
               ""
             ],
@@ -94,7 +94,7 @@
               "pm.test('Test 4: 200 Status Code', () => pm.expect(pm.response.code).to.equal(200));\r",
               "\r",
               "pm.test(\"Test 5: Mensagem retornada \u00e9 de sucesso\", function () {\r",
-              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"Successfully! Record has been fetched.\"));\r",
+              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemGet\"));\r",
               "});\r",
               ""
             ],
@@ -208,7 +208,7 @@
   ],
   "variable": [
     {
-      "id": "5af58cef-a86c-4b15-ad2b-7618d7c47f76",
+      "id": "9f992141-5568-4edc-9f62-b573d1b11c16",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
