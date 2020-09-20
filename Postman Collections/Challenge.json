@@ -104,7 +104,7 @@
               "\r",
               "// This checks the message returned\r",
               "pm.test(\"Mensagem retornada \u00e9 de sucesso\", function () {\r",
-              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemGet\"));\r",
+              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemGet/Del\"));\r",
               "});\r",
               ""
             ],
@@ -225,7 +225,7 @@
   ],
   "variable": [
     {
-      "id": "65d62b0e-9f3f-4810-95b4-4f15f3a479f2",
+      "id": "1090a3d9-4b88-462f-ab03-e1d6f85dc5aa",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
