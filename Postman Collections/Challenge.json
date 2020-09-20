@@ -104,7 +104,7 @@
               "\r",
               "// This checks the message returned\r",
               "pm.test(\"Mensagem retornada \u00e9 de sucesso\", function () {\r",
-              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemGet/Del\"));\r",
+              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemGet\"));\r",
               "});\r",
               ""
             ],
@@ -166,14 +166,9 @@
               "// This is using a pre-defined rule offered by Postman\r",
               "pm.test('Test 3: 200 Status Code', () => pm.response.to.be.ok)\r",
               "\r",
-              "// This is using a different rule offered by Postman (.code) and checking that it equals 200\r",
-              "pm.test('Test 4: 200 Status Code', () => pm.expect(pm.response.code).to.equal(200))\r",
               "\r",
               "// This checks the message returned\r",
-              "pm.test(\"Mensagem retornada \u00e9 de sucesso\", function () {\r",
-              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemGet/Del\"));\r",
-              "});\r",
-              ""
+              "pm.test(\"Mensagem retornada \u00e9 de sucesso\", () => pm.expectpm.response.json().message.to.eql(pm.environment.get(\"mensagemDel\")))"
             ],
             "type": "text/javascript"
           }
@@ -225,7 +220,7 @@
   ],
   "variable": [
     {
-      "id": "1090a3d9-4b88-462f-ab03-e1d6f85dc5aa",
+      "id": "54045528-25f6-4ac9-9e80-452d1c448144",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
