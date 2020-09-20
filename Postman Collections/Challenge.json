@@ -72,32 +72,36 @@
       "name": "Busca Empregado pelo ID",
       "event": [
         {
-          "listen": "prerequest",
+          "listen": "test",
           "script": {
-            "id": "3914c363-62a6-435a-8371-b1a861d94b2d",
+            "id": "36ec8bec-d124-4663-a26f-3d1ec7e2c049",
             "exec": [
+              "// This checks the status code number\r",
+              "pm.test(\"Test 1: 200 Status Code\", () => pm.response.to.have.status(200))\r",
+              "\r",
+              "// This checks the status text string\r",
+              "pm.test('Test 2: 200 Status Code', () => pm.response.to.have.status('OK'))\r",
+              "\r",
+              "// This is using a pre-defined rule offered by Postman\r",
+              "pm.test('Test 3: 200 Status Code', () => pm.response.to.be.ok)\r",
+              "\r",
+              "// This is using a different rule offered by Postman (.code) and checking that it equals 200\r",
+              "pm.test('Test 4: 200 Status Code', () => pm.expect(pm.response.code).to.equal(200))\r",
+              "\r",
+              "// This checks the message returned\r",
+              "pm.test(\"Mensagem retornada \u00e9 de sucesso\", function () {\r",
+              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemGet\"));\r",
+              "});\r",
               ""
             ],
             "type": "text/javascript"
           }
         },
         {
-          "listen": "test",
+          "listen": "prerequest",
           "script": {
-            "id": "466d49b1-dfa1-4845-a821-0237f970d6fe",
+            "id": "b9662683-6f05-47a8-8d8e-a57aba4ae1b5",
             "exec": [
-              "pm.test(\"Codigo do status \u00e9 200\", function () {\r",
-              "    pm.response.to.have.status(200);\r",
-              "});\r",
-              "\r",
-              "pm.test(\"Mensagem retornada \u00e9 de sucesso\", function () {\r",
-              "    pm.response.message = \"Successfully! Record has been fetched.\";\r",
-              "});\r",
-              "\r",
-              "/*pm.test(\"Armazena message na variavel mensagem\", function () {\r",
-              "    let jsonResponse = pm.response.json();\r",
-              "    pm.environment.set(\"mensagem\", jsonResponse.message)\r",
-              "});*/\r",
               ""
             ],
             "type": "text/javascript"
@@ -112,18 +116,19 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "{{url}}/employee/?id={{emp_id}}",
+          "raw": "{{url}}/employee/{{emp_id}}",
           "host": [
             "{{url}}"
           ],
           "path": [
             "employee",
-            ""
+            "{{emp_id}}"
           ],
           "query": [
             {
-              "key": "id",
-              "value": "{{emp_id}}"
+              "key": "",
+              "value": "",
+              "disabled": true
             }
           ]
         }
@@ -212,7 +217,7 @@
   ],
   "variable": [
     {
-      "id": "d9b59754-8fb4-43a8-adc8-db0ee5d1e175",
+      "id": "afe89de1-0492-44bd-9b63-078946ff6127",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
