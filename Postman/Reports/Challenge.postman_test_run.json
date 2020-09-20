@@ -1,0 +1,177 @@
+{
+	"id": "b5a5168e-a501-4b2e-baf1-18a6ea1f9b35",
+	"name": "Challenge",
+	"timestamp": "2020-09-20T23:40:36.159Z",
+	"collection_id": "b6c884f7-a319-4909-afa0-682fb5d6369c",
+	"folder_id": 0,
+	"environment_id": "a51844f4-a83c-465a-8f89-c48e08b5df34",
+	"totalPass": 14,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "de10f9bb-bafb-4c92-94e3-9503ddc0c008",
+			"name": "Criar Empregado",
+			"url": "http://dummy.restapiexample.com/api/v1/create?name=Tiago&salary=1000000&age=24",
+			"time": 967,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Test 1: 200 Status Code": true,
+				"Test 2: 200 Status Code": true,
+				"Test 3: 200 Status Code": true,
+				"Test 4: 200 Status Code": true,
+				"Test 5: Mensagem retornada é de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Test 1: 200 Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 2: 200 Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 3: 200 Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 4: 200 Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 5: Mensagem retornada é de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				967
+			],
+			"allTests": [
+				{
+					"Test 1: 200 Status Code": true,
+					"Test 2: 200 Status Code": true,
+					"Test 3: 200 Status Code": true,
+					"Test 4: 200 Status Code": true,
+					"Test 5: Mensagem retornada é de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "59b93476-f1ce-4fb2-9b7e-152eff9349fc",
+			"name": "Busca Empregado pelo ID",
+			"url": "http://dummy.restapiexample.com/api/v1/employee/6099",
+			"time": 923,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Test 1: 200 Status Code": true,
+				"Test 2: 200 Status Code": true,
+				"Test 3: 200 Status Code": true,
+				"Test 4: 200 Status Code": true,
+				"Test 5: Mensagem retornada é de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Test 1: 200 Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 2: 200 Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 3: 200 Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 4: 200 Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 5: Mensagem retornada é de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				923
+			],
+			"allTests": [
+				{
+					"Test 1: 200 Status Code": true,
+					"Test 2: 200 Status Code": true,
+					"Test 3: 200 Status Code": true,
+					"Test 4: 200 Status Code": true,
+					"Test 5: Mensagem retornada é de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "a5ef7695-aa79-448f-af25-0c356ba9387f",
+			"name": "Deleta Empregado pelo ID",
+			"url": "http://dummy.restapiexample.com/api/v1/delete/6099",
+			"time": 866,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Test 1: 200 Status Code": true,
+				"Test 2: 200 Status Code": true,
+				"Test 3: 200 Status Code": true,
+				"Test 4: Mensagem retornada é de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Test 1: 200 Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 2: 200 Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 3: 200 Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test 4: Mensagem retornada é de sucesso": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				866
+			],
+			"allTests": [
+				{
+					"Test 1: 200 Status Code": true,
+					"Test 2: 200 Status Code": true,
+					"Test 3: 200 Status Code": true,
+					"Test 4: Mensagem retornada é de sucesso": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2756,
+	"collection": {
+		"requests": [
+			{
+				"id": "de10f9bb-bafb-4c92-94e3-9503ddc0c008",
+				"method": "POST"
+			},
+			{
+				"id": "59b93476-f1ce-4fb2-9b7e-152eff9349fc",
+				"method": "GET"
+			},
+			{
+				"id": "a5ef7695-aa79-448f-af25-0c356ba9387f",
+				"method": "DELETE"
+			}
+		]
+	}
+}
