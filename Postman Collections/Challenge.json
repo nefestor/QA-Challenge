@@ -153,27 +153,37 @@
       "name": "Busca Empregado pelo ID Copy",
       "event": [
         {
-          "listen": "prerequest",
+          "listen": "test",
           "script": {
-            "id": "d4e0bf38-fa66-42a4-8dec-a5055d288959",
+            "id": "2f1a2376-6279-473b-81b1-57928d185758",
             "exec": [
+              "// This checks the status code number\r",
+              "pm.test(\"Test 1: 200 Status Code\", () => pm.response.to.have.status(200))\r",
+              "\r",
+              "// This checks the status text string\r",
+              "pm.test('Test 2: 200 Status Code', () => pm.response.to.have.status('OK'))\r",
+              "\r",
+              "// This is using a pre-defined rule offered by Postman\r",
+              "pm.test('Test 3: 200 Status Code', () => pm.response.to.be.ok)\r",
+              "\r",
+              "// This is using a different rule offered by Postman (.code) and checking that it equals 200\r",
+              "pm.test('Test 4: 200 Status Code', () => pm.expect(pm.response.code).to.equal(200))\r",
+              "\r",
+              "// This checks the message returned\r",
+              "pm.test(\"Mensagem retornada \u00e9 de sucesso\", function () {\r",
+              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemGet/Del\"));\r",
+              "});\r",
               ""
             ],
             "type": "text/javascript"
           }
         },
         {
-          "listen": "test",
+          "listen": "prerequest",
           "script": {
-            "id": "aac58125-b9cf-40ca-a4c3-15224c0c59df",
+            "id": "1398f857-38b6-4ef9-b832-17468bad49db",
             "exec": [
-              "pm.test(\"Codigo do status \u00e9 200\", function () {\r",
-              "    pm.response.to.have.status(200);\r",
-              "});\r",
-              "\r",
-              "pm.test(\"Mensagem delete retornada\", function () {\r",
-              "    pm.response.message = \"Successfully! Record has been deleted\";\r",
-              "});"
+              ""
             ],
             "type": "text/javascript"
           }
@@ -186,23 +196,7 @@
       "request": {
         "method": "DELETE",
         "header": [],
-        "url": {
-          "raw": "{{url}}/delete/{{emp_id}}?id={{emp_id}}",
-          "host": [
-            "{{url}}"
-          ],
-          "path": [
-            "delete",
-            "{{emp_id}}"
-          ],
-          "query": [
-            {
-              "key": "id",
-              "value": "{{emp_id}}",
-              "type": "text"
-            }
-          ]
-        }
+        "url": "{{url}}/delete/{{emp_id}}"
       },
       "response": []
     }
@@ -231,7 +225,7 @@
   ],
   "variable": [
     {
-      "id": "645f6684-aaaf-48d6-879d-7054c0d19fb4",
+      "id": "65d62b0e-9f3f-4810-95b4-4f15f3a479f2",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
