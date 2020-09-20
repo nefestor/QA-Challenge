@@ -23,13 +23,27 @@
           "script": {
             "id": "24bad26c-8edb-41f3-bbb5-2b0ac48fee74",
             "exec": [
-              "pm.test(\"Status code is 200\", function () {\r",
-              "    pm.response.to.have.status(200);\r",
-              "});\r",
-              "\r",
               "// salva o id do empregado na vari\u00e1vel de ambiente emp_id\r",
               "let jsonResponse = pm.response.json();\r",
-              "pm.environment.set(\"emp_id\", jsonResponse.data.id);"
+              "pm.environment.set(\"emp_id\", jsonResponse.data.id);\r",
+              "\r",
+              "// This checks the status code number\r",
+              "pm.test(\"Test 1: 200 Status Code\", () => pm.response.to.have.status(200))\r",
+              "\r",
+              "// This checks the status text string\r",
+              "pm.test('Test 2: 200 Status Code', () => pm.response.to.have.status('OK'))\r",
+              "\r",
+              "// This is using a pre-defined rule offered by Postman\r",
+              "pm.test('Test 3: 200 Status Code', () => pm.response.to.be.ok)\r",
+              "\r",
+              "// This is using a different rule offered by Postman (.code) and checking that it equals 200\r",
+              "pm.test('Test 4: 200 Status Code', () => pm.expect(pm.response.code).to.equal(200))\r",
+              "\r",
+              "// This checks the message returned\r",
+              "pm.test(\"Mensagem retornada \u00e9 de sucesso\", function () {\r",
+              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemPost\"));\r",
+              "});\r",
+              ""
             ],
             "type": "text/javascript"
           }
@@ -217,7 +231,7 @@
   ],
   "variable": [
     {
-      "id": "afe89de1-0492-44bd-9b63-078946ff6127",
+      "id": "645f6684-aaaf-48d6-879d-7054c0d19fb4",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
