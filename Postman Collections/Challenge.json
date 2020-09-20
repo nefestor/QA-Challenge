@@ -154,7 +154,7 @@
               "pm.test('Test 3: 200 Status Code', () => pm.response.to.be.ok);\r",
               "\r",
               "pm.test(\"Test 4: Mensagem retornada \u00e9 de sucesso\", function () {\r",
-              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"Successfully! Record has been deleted\"));\r",
+              "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemDel\"));\r",
               "});\r",
               ""
             ],
@@ -208,7 +208,7 @@
   ],
   "variable": [
     {
-      "id": "9f992141-5568-4edc-9f62-b573d1b11c16",
+      "id": "32452507-ad02-456e-846c-60bc4e977b32",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
