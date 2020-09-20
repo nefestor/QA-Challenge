@@ -85,13 +85,13 @@
           "script": {
             "id": "36ec8bec-d124-4663-a26f-3d1ec7e2c049",
             "exec": [
-              "pm.test(\"Test 1: 200 Status Code\", () => pm.response.to.have.status(200))\r",
+              "pm.test(\"Test 1: 200 Status Code\", () => pm.response.to.have.status(200));\r",
               "\r",
-              "pm.test('Test 2: 200 Status Code', () => pm.response.to.have.status('OK'))\r",
+              "pm.test('Test 2: 200 Status Code', () => pm.response.to.have.status('OK'));\r",
               "\r",
-              "pm.test('Test 3: 200 Status Code', () => pm.response.to.be.ok)\r",
+              "pm.test('Test 3: 200 Status Code', () => pm.response.to.be.ok);\r",
               "\r",
-              "pm.test('Test 4: 200 Status Code', () => pm.expect(pm.response.code).to.equal(200))\r",
+              "pm.test('Test 4: 200 Status Code', () => pm.expect(pm.response.code).to.equal(200));\r",
               "\r",
               "pm.test(\"Test 5: Mensagem retornada \u00e9 de sucesso\", function () {\r",
               "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemGet\"));\r",
@@ -208,7 +208,7 @@
   ],
   "variable": [
     {
-      "id": "86522b68-1e09-49e6-9b51-58ddfef02b4e",
+      "id": "b1a6c900-3b1b-4445-8e30-9083e500ce6f",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
