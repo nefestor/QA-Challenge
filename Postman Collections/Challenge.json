@@ -147,11 +147,11 @@
           "script": {
             "id": "2f1a2376-6279-473b-81b1-57928d185758",
             "exec": [
-              "pm.test(\"Test 1: 200 Status Code\", () => pm.response.to.have.status(200))\r",
+              "pm.test(\"Test 1: 200 Status Code\", () => pm.response.to.have.status(200));\r",
               "\r",
-              "pm.test('Test 2: 200 Status Code', () => pm.response.to.have.status('OK'))\r",
+              "pm.test('Test 2: 200 Status Code', () => pm.response.to.have.status('OK'));\r",
               "\r",
-              "pm.test('Test 3: 200 Status Code', () => pm.response.to.be.ok)\r",
+              "pm.test('Test 3: 200 Status Code', () => pm.response.to.be.ok);\r",
               "\r",
               "pm.test(\"Test 4: Mensagem retornada \u00e9 de sucesso\", function () {\r",
               "    pm.expect(pm.response.json().message).to.eql(pm.environment.get(\"mensagemDel\"));\r",
@@ -208,7 +208,7 @@
   ],
   "variable": [
     {
-      "id": "b1a6c900-3b1b-4445-8e30-9083e500ce6f",
+      "id": "eb838959-b4cc-430f-b1bd-d1134f6e9cb4",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
