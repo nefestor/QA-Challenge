@@ -208,7 +208,7 @@
   ],
   "variable": [
     {
-      "id": "7006c871-ba8d-41f6-aadf-65d737fc6220",
+      "id": "5af58cef-a86c-4b15-ad2b-7618d7c47f76",
       "key": "url",
       "value": "http://dummy.restapiexample.com/api/v1",
       "type": "string"
