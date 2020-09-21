@@ -1,5 +1,5 @@
 *** Settings ***
-Library     SeleniumLibraby
+Library     SeleniumLibrary
 
 *** Variable ***
 ${url}      http://automationpractice.com/index.php
