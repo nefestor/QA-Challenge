@@ -1,4 +1,4 @@
- ## QA Challenge AME
+ ## QA Challenge
 
 
 ### Relatório de execução da Collection no Postman
